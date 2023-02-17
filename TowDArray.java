@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class TowDArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int row = sc.nextInt();
+        int col = sc.nextInt();
+        int[][] matrix = new int[row][col];
+
+        // input
+        // row
+        for (int i = 0; i < row; i++) {
+            // col
+            for (int j = 0; j < col; j++) {
+                matrix[i][j] = sc.nextInt();
+            }
+        }
+
+        int x = sc.nextInt();
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                if (matrix[i][j] == x) {
+                    System.out.println("X is found at locations  ("+i+","+j+")");
+                }
+                else {
+                    System.out.println("X is Not found ");
+                }
+            }
+        }
+        //System.out.println();
+    }
+}
